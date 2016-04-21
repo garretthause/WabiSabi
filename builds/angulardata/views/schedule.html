@@ -1,15 +1,13 @@
 <section class="schedulePage">
 <div class="search">
 	<h1>Schedule</h1>
-	<p>Wabi-Sabi Training brings you a new way to experience everything from classic yoga to modern rehabilitation training. With spacious rooms and top of the line equipment, we have many options that will make your training simple and complete.</p>
 
-<ul>
-  <li type="circle">Beginner-friendly yoga</li>
-  <li type="circle">Customizable training plans that work with your budget.</li>
-  <li type="circle">Free training consultations.</li>
-  <li type="circle">You get the first week FREE!*</li>
-  <li>*New members only.</li>
-</ul> 
+<div class="meeting" ng-repeat="(key, meeting) in meetings">
+    
+
+
+    <span class="text">{{meeting.name}}</span>
+  </div>
 
 </div>
 </section>

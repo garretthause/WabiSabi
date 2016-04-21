@@ -1,7 +1,38 @@
+myApp.controller('ScheduleController', 
+  ['$scope', '$rootScope', '$firebaseAuth', '$firebaseArray', 'FIREBASE_URL',
+  function($scope, $rootScope, $firebaseAuth, $firebaseArray, FIREBASE_URL) {
 
-artistControllers.controller('ScheduleController', ['$scope', '$http', function ($scope, $http){
-        $http.get('js/data.json').success(function(data) {
-          $scope.artists = data;
-          $scope.artistOrder = 'name';
+    var ref = new Firebase(FIREBASE_URL);
+    var auth = $firebaseAuth(ref);
+
+    auth.$onAuth(function(authUser) {
+      if (authUser) {
+        var meetingsRef = new Firebase(FIREBASE_URL + 'classes/');
+        var meetingsInfo = $firebaseArray(meetingsRef);
+        $scope.meetings = meetingsInfo;
+
+        meetingsInfo.$loaded().then(function(data) {
+          $rootScope.howManyMeetings = meetingsInfo.length;
+        }); //Make sure meeting data is loaded
+
+        meetingsInfo.$watch(function(data) {
+          $rootScope.howManyMeetings = meetingsInfo.length;
         });
-}]);
+
+
+        $scope.addMeeting = function() {
+          meetingsInfo.$add({
+            name: $scope.meetingname,
+            date: Firebase.ServerValue.TIMESTAMP
+          }).then(function() {
+            $scope.meetingname='';
+          }); //promise
+        }; // addMeeting
+
+        $scope.deleteMeeting = function(key) {
+          meetingsInfo.$remove(key);
+        }; // deleteMeeting
+
+      } // User Authenticated
+    }); // on Auth
+}]); //Controller

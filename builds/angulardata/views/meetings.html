@@ -1,8 +1,8 @@
 <div class="card meetings cf">
 
   <div class="textintro">
-    <h1>Add a Meeting</h1>
-    <p>Type a meeting name and hit +</p>
+    <h1>Add a Class</h1>
+    <p>Type a class name and hit +</p>
   </div><!-- textintro -->
 
   <form class="formgroup addmeeting cf"
@@ -12,7 +12,7 @@
 
     <div class="inputwrapper">
       <input type="text" name="meetingname"
-      placeholder="Meeting name"
+      placeholder="Class name"
       ng-model="meetingname" ng-required="true">
     </div>
 
@@ -21,11 +21,11 @@
     
   </form>
 
-  <h2>Your meetings</h2>
+  <h2>Your classes</h2>
   <div class="meeting" ng-repeat="(key, meeting) in meetings">
     <button class="btn btn-delete tooltip"
       ng-click="deleteMeeting(key)">
-      <span>Delete this meeting</span>
+      <span>Delete this class</span>
     </button>
 
     <a class="btn btn-checkin tooltip" 
