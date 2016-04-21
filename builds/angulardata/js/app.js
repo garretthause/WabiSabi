@@ -45,6 +45,18 @@ myApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'views/home.html',
       controller: 'HomeController'
     }).
+    when('/about', {
+      templateUrl: 'views/about.html',
+      controller: 'HomeController'
+    }).
+    when('/programs', {
+      templateUrl: 'views/programs.html',
+      controller: 'HomeController'
+    }).
+    when('/schedule', {
+      templateUrl: 'views/schedule.html',
+      controller: 'ScheduleController'
+    }).
     otherwise({
       redirectTo: '/home'
     });

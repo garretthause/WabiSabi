@@ -7,8 +7,8 @@ myApp.controller('MeetingsController',
 
     auth.$onAuth(function(authUser) {
       if (authUser) {
-        var meetingsRef = new Firebase(FIREBASE_URL + 'users/' +
-          $rootScope.currentUser.$id + '/meetings');
+        //var meetingsRef = new Firebase(FIREBASE_URL + 'users/' + $rootScope.currentUser.$id + '/meetings');
+        var meetingsRef = new Firebase(FIREBASE_URL + 'classes/');
         var meetingsInfo = $firebaseArray(meetingsRef);
         $scope.meetings = meetingsInfo;
 
