@@ -41,7 +41,11 @@ myApp.config(['$routeProvider', function($routeProvider) {
         } //current Auth
       } //resolve
     }).
+    when('/home', {
+      templateUrl: 'views/home.html',
+      controller: 'HomeController'
+    }).
     otherwise({
-      redirectTo: '/login'
+      redirectTo: '/home'
     });
 }]);

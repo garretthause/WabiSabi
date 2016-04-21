@@ -470,6 +470,22 @@ nav ul {
   float: right;
 }
 
+.homeBar {
+  float: left;
+  text-decoration: none;
+  color: #145266;
+  font-family: Lato, 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+  margin: 10px 0;
+  font-size: 1.1em;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.homeBar a:hover {
+  color: #E76C5A;
+  text-decoration: none;
+}
+
 nav ul li {
   float: right;
   color: #145266;
