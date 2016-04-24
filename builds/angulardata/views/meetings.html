@@ -16,6 +16,18 @@
       ng-model="meetingname" ng-required="true">
     </div>
 
+    <div class="inputwrapper">
+      <input type="text" name="classDate"
+      placeholder="Class date"
+      ng-model="classDate" ng-required="true">
+    </div>
+
+    <div class="inputwrapper">
+      <input type="text" name="classTime"
+      placeholder="Class time"
+      ng-model="classTime" ng-required="true">
+    </div>
+
     <button type="submit" class="btn"
       ng-disabled="myform.$invalid">+</button>
     
@@ -37,7 +49,7 @@
       <span>View list of checked in users</span></a>
 
 
-    <span class="text">{{meeting.name}}</span>
+    <span class="text">Class Name: {{meeting.name}} </br> Class Date: {{meeting.classdate}} </br> Class Time: {{meeting.time}}</span>
   </div>
 
 </div><!-- meetings cf -->

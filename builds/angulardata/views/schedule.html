@@ -1,13 +1,11 @@
-<section class="schedulePage">
-<div class="search">
-	<h1>Schedule</h1>
+<div class="card meetings cf">
 
-<div class="meeting" ng-repeat="(key, meeting) in meetings">
-    
+  <div class="textintro">
+    <h1>Classes</h1>
+  </div><!-- textintro -->
 
-
-    <span class="text">{{meeting.name}}</span>
+  <div class="meeting" ng-repeat="(key, meeting) in meetings">
+    <span class="text">Class Name: {{meeting.name}} </br> Class Date: {{meeting.classdate}} </br> Class Time: {{meeting.time}}</span>
   </div>
 
-</div>
-</section>
+</div><!-- meetings cf -->

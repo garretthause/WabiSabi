@@ -7,7 +7,6 @@ myApp.controller('MeetingsController',
 
     auth.$onAuth(function(authUser) {
       if (authUser) {
-        //var meetingsRef = new Firebase(FIREBASE_URL + 'users/' + $rootScope.currentUser.$id + '/meetings');
         var meetingsRef = new Firebase(FIREBASE_URL + 'classes/');
         var meetingsInfo = $firebaseArray(meetingsRef);
         $scope.meetings = meetingsInfo;
@@ -20,13 +19,16 @@ myApp.controller('MeetingsController',
           $rootScope.howManyMeetings = meetingsInfo.length;
         });
 
-
         $scope.addMeeting = function() {
           meetingsInfo.$add({
             name: $scope.meetingname,
+            classdate: $scope.classDate,
+            time: $scope.classTime,
             date: Firebase.ServerValue.TIMESTAMP
           }).then(function() {
             $scope.meetingname='';
+            $scope.classDate="";
+            $scope.classTime="";
           }); //promise
         }; // addMeeting
 
