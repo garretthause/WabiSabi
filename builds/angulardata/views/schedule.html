@@ -4,7 +4,7 @@
     <h1>Classes</h1>
   </div><!-- textintro -->
 
-  <div class="meeting" ng-repeat="(key, meeting) in meetings">
+  <div class="meeting" ng-repeat="(key, meeting) in meetings | orderBy:'classdate'">
     <span class="text">Class Name: {{meeting.name}} </br> Class Date: {{meeting.classdate}} </br> Class Time: {{meeting.time}}</span>
   </div>
 
