@@ -6,11 +6,8 @@ myApp.controller('MeetingsController',
     var auth = $firebaseAuth(ref);
 
 $scope.orderByDate = function(item) {
-    var parts = item.classdate.split('/');
-    var newDate = new Date(parseInt(parts[2], 
-                        parseInt(parts[1]), 
-                        parseInt(parts[0]));
-
+    var parts = item.classDate.split('/');
+    var newDate = parts[2]+parts[1]+parts[0];
     return newDate;
     };
 
@@ -18,6 +15,11 @@ $scope.orderByDate = function(item) {
        onSelect: function(dateText, inst) { 
           $scope.classDate = dateText;
           this.focus();
+          var parts = dateText.split('/');
+    var newDate = parts[2]+
+                        parts[1]+ 
+                        parts[0];
+                        alert(newDate);
         }
     });
 

@@ -34,7 +34,7 @@
   </form>
 
   <h2>Your classes</h2>
-  <div class="meeting" ng-repeat="(key, meeting) in meetings | orderBy:'orderByDate'">
+  <div class="meeting" ng-repeat="(key, meeting) in meetings | orderBy:'classdate'">
     <button class="btn btn-delete tooltip"
       ng-click="deleteMeeting(key)">
       <span>Delete this class</span>
