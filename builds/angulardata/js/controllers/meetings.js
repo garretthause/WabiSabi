@@ -5,6 +5,22 @@ myApp.controller('MeetingsController',
     var ref = new Firebase(FIREBASE_URL);
     var auth = $firebaseAuth(ref);
 
+$scope.orderByDate = function(item) {
+    var parts = item.classdate.split('/');
+    var newDate = new Date(parseInt(parts[2], 
+                        parseInt(parts[1]), 
+                        parseInt(parts[0]));
+
+    return newDate;
+    };
+
+    $(".datepicker").datepicker({
+       onSelect: function(dateText, inst) { 
+          $scope.classDate = dateText;
+          this.focus();
+        }
+    });
+
     auth.$onAuth(function(authUser) {
       if (authUser) {
         var meetingsRef = new Firebase(FIREBASE_URL + 'classes/');
