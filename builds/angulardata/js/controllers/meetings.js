@@ -5,11 +5,6 @@ myApp.controller('MeetingsController',
     var ref = new Firebase(FIREBASE_URL);
     var auth = $firebaseAuth(ref);
 
-$scope.orderByDate = function(item) {
-    var parts = item.classDate.split('/');
-    var newDate = parts[2]+parts[1]+parts[0];
-    return newDate;
-    };
 
     $(".datepicker").datepicker({
        onSelect: function(dateText, inst) { 
