@@ -192,7 +192,7 @@ input[type=radio] {
   overflow: hidden;
 }
 
-.btn {
+.mybtn {
     display: inline-block;
     padding: 12px 24px;
     margin-bottom: 0;
@@ -222,21 +222,21 @@ input[type=radio] {
 }
 
 
-.btn .btn-left { float: left; }
-.btn .btn-right { float: right; }
-.btn:focus, .btn:hover {
+.mybtn .mybtn-left { float: left; }
+.mybtn .mybtn-right { float: right; }
+.mybtn:focus, .mybtn:hover {
   background-color: #DC322F;
   outline: none;
 }
 
-.btn-list { background-image: url(../images/icons/icon_list.png); }
-.btn-checkin { background-color: #859835; background-image: url(../images/icons/icon_checkmark.png); }
-.btn-delete { background-color: #C94C24; background-image: url(../images/icons/icon_trash.png); }
-.btn-love { background-image: url(../images/icons/icon_heart.png); }
-.btn-email { background-image: url(../images/icons/icon_email.png); }
-.btn-meeting { background-image:  url(../images/icons/icon_meeting.png); }
+.mybtn-list { background-image: url(../images/icons/icon_list.png); }
+.mybtn-checkin { background-color: #859835; background-image: url(../images/icons/icon_checkmark.png); }
+.mybtn-delete { background-color: #C94C24; background-image: url(../images/icons/icon_trash.png); }
+.mybtn-love { background-image: url(../images/icons/icon_heart.png); }
+.mybtn-email { background-image: url(../images/icons/icon_email.png); }
+.mybtn-meeting { background-image:  url(../images/icons/icon_meeting.png); }
 
-.btn-pick {
+.mybtn-pick {
   background: #2D8BCF url(../images/icons/icon_dice.png) 5px center no-repeat;
   background-size: 20px 20px;
   padding: 5px 5px 5px 30px;
@@ -244,7 +244,7 @@ input[type=radio] {
   margin: 0 auto;
 }
 
-.btn-reset {
+.mybtn-reset {
   background: #CB4B19 url(../images/icons/icon_reset.png)  5px center no-repeat;
   background-size: 20px 20px;
   padding: 5px 5px 5px 50px;
@@ -382,7 +382,7 @@ fieldset {
 }
 
 
-.userlist li.expanded .btn-love {
+.userlist li.expanded .mybtn-love {
   background-color: #C61C6F;
 }
 
@@ -428,7 +428,7 @@ ul.awardslist li:hover {
   background-color: #F5974E;
 }
 
-ul.awardslist li .btn-delete {
+ul.awardslist li .mybtn-delete {
   background-color: transparent;
   background-size: 15px 15px;
   background-position: center 40%;
@@ -567,7 +567,7 @@ nav li a:hover {
 
 }
 
-.meetings .meeting .btn {
+.meetings .meeting .mybtn {
   margin-right: 4px;
   padding: 1px 8px;
 }
@@ -581,11 +581,11 @@ nav li a:hover {
   text-decoration: none;
 }
 
-.tooltip {
+.mytooltip {
   position: relative;
 }
 
-.tooltip span {
+.mytooltip span {
   background: #FFF;
   color: #000;
   font-size: .8em;
@@ -612,7 +612,7 @@ nav li a:hover {
           transition: all .25s ease-out;
 }
 
-.tooltip:hover span {
+.mytooltip:hover span {
   opacity: 1;
   pointer-events: auto;
   -webkit-transform: translateY(0px);
@@ -646,7 +646,7 @@ nav li a:hover {
   margin: 0;
   padding: 0;
 }
-.checkin .btn {
+.checkin .mybtn {
   padding: 0;
   margin: 0 3px;
 }
@@ -661,7 +661,7 @@ input.ng-valid.ng-touched {
   border: 1px solid #509D12;
 }
 
-.ng-invalid .btn {
+.ng-invalid .mybtn {
   background: gray;
 }
 
