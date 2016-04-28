@@ -1,4 +1,4 @@
-  <header id="header">
+<header id="header">
 
       <!--headerBox Start Here -->
       <div class="header">
@@ -11,27 +11,24 @@
   										<section class="menu-wrap">
   											<ul class="nav">
                           <li>
-                            <a href="#/index">Home</a>
+                            <a ng-href="#/index">Home</a>
                           </li>
   												<li>
-  													<a href="#/programs">Programs</a>
+  													<a ng-href="#/programs">Programs</a>
   												</li>
                           <li>
-                            <a href="#/schedule">Schedule</a>
+                            <a ng-href="#/schedule">Schedule</a>
                           </li>
                           <li>
-                            <a href="#/about">About</a>
-                          </li>
-                          <li>
-                            <a href="#/login">Login</a>
-                          </li>
-                          <li>
-                            <a href="#/register">Register</a>
-                          </li>
-                          <li>
-                            <a href="#/meetings">Add Class</a>
+                            <a ng-href="#/about">About</a>
                           </li>
 
+                          <li> <div class="userinfo" ng-show="currentUser" ng-controller="RegistrationController">
+                            <span class="userinfo">You are logged in as       {{ currentUser.firstname}}</span>
+                            <a ng-href="#/login" ng-click="logout()">logout</a> </div>
+                          </li>
+                          <li><a ng-hide="currentUser" ng-href="#/login">Login</a></li>
+                          <li><a ng-hide="currentUser" ng-href="#/register">Register</a></li>
   											</ul>
   										</section>
   									</div>
@@ -42,4 +39,4 @@
   				</div>
 
       <!--headerCntr End Here -->
-    </header>
+</header>
