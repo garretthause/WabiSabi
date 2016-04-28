@@ -1,6 +1,4 @@
 <header id="header">
-
-      <!--headerBox Start Here -->
       <div class="header">
   					<div class="container-fluid">
   						<div class="row">
@@ -10,25 +8,28 @@
   										<a href="#/index" class="logo"><img src="assets/img/logo.jpg" height="75" width="75"alt="" /></a>
   										<section class="menu-wrap">
   											<ul class="nav">
-                          <li>
-                            <a ng-href="#/index">Home</a>
-                          </li>
-  												<li>
-  													<a ng-href="#/programs">Programs</a>
-  												</li>
-                          <li>
-                            <a ng-href="#/schedule">Schedule</a>
-                          </li>
-                          <li>
-                            <a ng-href="#/about">About</a>
-                          </li>
-                          <li> <div class="userinfo" ng-show="currentUser" ng-controller="RegistrationController">
-                            <span class="userinfo">You are logged in as       {{ currentUser.firstname}}</span>
-                            <a ng-href="#/login" ng-click="logout()">logout</a> </div>
-                          </li>
-                          <li><a ng-hide="currentUser" ng-href="#/login">Login</a></li>
-                          <li><a ng-hide="currentUser" ng-href="#/register">Register</a></li>
-  											</ul>
+                          
+                          <li><a ng-href="#/index">Home</a></li>
+
+  												<li><a ng-href="#/programs">Programs</a></li>
+
+                          <li><a ng-href="#/schedule">Schedule</a></li>
+
+                          <li><a ng-href="#/about">About</a></li>
+
+                          <div class="myright">
+                            <li><a disabled ng-show="currentUser">Hi {{ currentUser.firstname}}</a></li>
+
+                            <li> 
+                              <div ng-show="currentUser" ng-controller="RegistrationController">
+                              <a ng-href="#/login" ng-click="logout()">logout</a> 
+                              </div>
+                            </li>
+
+                            <li><a ng-hide="currentUser" ng-href="#/login">Login</a></li>
+                            <li><a ng-hide="currentUser" ng-href="#/register">Register</a></li>
+    											</div>
+                        </ul>
   										</section>
   									</div>
   								</div>
@@ -36,6 +37,4 @@
   						</div>
   					</div>
   				</div>
-
-      <!--headerCntr End Here -->
 </header>

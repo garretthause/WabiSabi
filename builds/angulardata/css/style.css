@@ -669,3 +669,14 @@ input.ng-valid.ng-touched {
   color: red;
   padding-bottom: 10px;
 }
+
+
+.myright {
+  float: right;
+  color: white;
+}
+
+a[disabled]:hover {
+  cursor: default;
+  color:inherit;
+}
