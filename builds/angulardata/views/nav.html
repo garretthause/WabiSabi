@@ -8,21 +8,19 @@
   										<a href="#/index" class="logo"><img src="assets/img/logo.jpg" height="75" width="75"alt="" /></a>
   										<section class="menu-wrap">
   											<ul class="nav">
-                          
-                          <li><a ng-href="#/index">Home</a></li>
 
-  												<li><a ng-href="#/programs">Programs</a></li>
+                            <li><a ng-href="#/index">Home</a></li>
 
-                          <li><a ng-href="#/schedule">Schedule</a></li>
+  												  <li><a ng-href="#/programs">Programs</a></li>
 
-                          <li><a ng-href="#/about">About</a></li>
+                            <li><a ng-href="#/schedule">Upcoming Classes</a></li>
 
                           <div class="myright">
                             <li><a disabled ng-show="currentUser">Hi {{ currentUser.firstname}}</a></li>
 
-                            <li> 
+                            <li>
                               <div ng-show="currentUser" ng-controller="RegistrationController">
-                              <a ng-href="#/login" ng-click="logout()">logout</a> 
+                              <a ng-href="#/login" ng-click="logout()">logout</a>
                               </div>
                             </li>
 
@@ -30,6 +28,13 @@
                             <li><a ng-hide="currentUser" ng-href="#/register">Register</a></li>
     											</div>
                         </ul>
+                      	<div class="header-widget">
+                          <div class="navbar-header visible-xs">
+                            <button type="button" class="navbar-toggle">
+                              <span class="icon-bar">&nbsp;</span><span class="icon-bar">&nbsp;</span><span class="icon-bar">&nbsp;</span>
+                            </button>
+                          </div>
+                        </div>
   										</section>
   									</div>
   								</div>
