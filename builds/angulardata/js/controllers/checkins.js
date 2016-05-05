@@ -5,9 +5,7 @@ myApp.controller('CheckInsController',
     $scope.whichmeeting = $routeParams.mId;
     $scope.whichuser = $routeParams.uId;
 
-    var ref = new Firebase(FIREBASE_URL + 'users/' +
-      $scope.whichuser + '/meetings/' +
-      $scope.whichmeeting + '/checkins');
+    var ref = new Firebase(FIREBASE_URL + '/checkins');
 
     var checkinsList = $firebaseArray(ref);
     $scope.checkins = checkinsList;
